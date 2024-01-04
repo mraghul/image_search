@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.text-center{text-align: center;}
+
+.container {
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+    height: 100vh;
+}
+
+.container h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    letter-spacing: 10px;
+}
+
+.bowl {
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+    transform-origin: bottom center;
+    animation: animate 5s linear infinite;
+    z-index: 9;
+}
+
+.bowl::before {
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+    transform: translateX(-50%);
+    width: 40%;
+    height: 30px;
+    border-radius: 50%;
+    border: 6px solid #eee;
+}
+
+.bowl::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.water {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(65, 193, 251, 0.5);
+    border-radius: 0px 0px 150px 150px;
+    transform-origin: top center;
+    animation: animateWater 5s linear infinite;
+}
+
+.water::before {
+    content: '';
+    position: absolute;
+    top: -6%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #1fa4e0e6;
+}
+
+.shadow {
+    position: absolute;
+    top: calc(50% + 150px);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 300px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+img.fish {
+    position: absolute;
+    top: 15%;
+    width: 75px;
+    animation: animatefish 5s linear infinite;
+}
+
+@keyframes animatefish {
+    0% {
+        transform: translate(0, 0) rotateY(180deg);
+    }
+
+    50% {
+        transform: translate(180px, 0) rotateY(180deg);
+    }
+
+    51% {
+        transform: translate(180px, 0) rotateY(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotateY(0deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes animateWater {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* --------------- Fish bowl css -------------- */
+
+
+/* ---------------- Search image css -------------- */
+
+
+.title{
+    font-size: 35px;
+    color: #444;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0px;
+}
+.title::before{
+    content: '';
+    width: 200px;
+    height: 5px;
+    background-color: #7b1798;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(60px);
+    border-radius: 50px;
+}
+.title::after{
+    content: '';
+    width: 70px;
+    height: 10px;
+    background-color: #7b1798;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(12px);
+    border-radius: 50px;
+}
+#image-search-app form{text-align: center;margin-bottom: 50px;}
+
+#image-search-app input{
+    width: 350px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    color: #444;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 5px;
+}
+.btn-submit{
+    background-color: #7b1798;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    width: 120px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.btn-show-more{
+    background-color: #7b1798;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    width: 160px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+    margin: 50px auto;
+    display: none;
+    cursor: pointer;
+}
+.search-resultts{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 50px;
+    gap: 30px;
+}
+.search-result{box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);border-radius: 10px;}
+.search-result img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.search-result a{
+    font-size: 18px;
+    color: #7b1798;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 30px 25px;
+    display: block;
+    margin-top: -5px;
+    border-radius: 0px 0px 10px 10px;
+    width: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
